@@ -32,12 +32,12 @@
     document.write(alunos[1]);
     document.write("<br>");
     //criando array para 4 notas
-    let notas=new Array(4);
+    let notas = new Array(4);
     document.write("<br>");
     document.write("Numero de Notas: "+notas.length);
     document.write("<br>");
     //repetição para informar as notas
-    for (n =0; n < 4; n++) {
+    for (n = 0; n < 4; n++) {
         notas[n] = window.prompt("Informe a nota"+n+":");
     }
     document.write("<br>");
@@ -48,11 +48,27 @@
     let nome = "";
     nome = window.prompt("Qual seu nome: ");
     //percorrendo todas as caracteristicas de um string
-    for (letra in nome) {
-        document.write(nome[letra]+"<br>");
-        }
 
+    for (let letra = 0; letra < nome.length; letra++) {
+      document.write(nome[letra]+"<br>");
+    }
     
+    for (letra in nome) {
+      document.write(letra[nome]+"<br>");
+    }
+    
+    // array = ['a', 'n', 'a']
+    for (indice in array) {
+      // indice = 0
+      array[indice]
+      document.write(array[indice]+"<br>");
+    }
+
+    for (valor of array) {
+      // valor = a
+      document.write(valor+"<br>");
+    }
+
   </script>
 </body>
 </html>
